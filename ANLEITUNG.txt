@@ -1,0 +1,59 @@
+# Game of Two: so kommt die Seite online
+
+Dauer: ca. 10 Minuten. Am besten am Laptop machen (nicht am Handy).
+
+## Was ist in diesem Ordner?
+
+| Datei / Ordner | Wozu |
+|---|---|
+| `public/` | Die Webseite selbst (Design, Buttons, Icons, Schriften) |
+| `netlify/functions/state.mjs` | Der gemeinsame Speicher, damit beide Handys denselben Stand sehen |
+| `netlify.toml` | Sagt Netlify, wo was liegt |
+| `package.json` | Sagt Netlify, welches Zusatzpaket es installieren muss |
+
+## Schritt 0: Lokal anschauen (optional)
+
+1. ZIP entpacken
+2. `public/index.html` doppelklicken
+3. Die Seite läuft im **Demo-Modus** (oranger Hinweis oben). Sync gibt es erst auf Netlify.
+
+## Schritt 1: GitHub-Konto und Repository
+
+1. Auf <https://github.com> ein gratis Konto erstellen (falls du noch keins hast)
+2. Oben rechts auf **+** und dann **New repository**
+3. Name: `game-of-two`, Sichtbarkeit egal (Private geht auch)
+4. **Create repository** klicken
+5. Auf der neuen Seite auf den Link **uploading an existing file** klicken
+6. Den **Inhalt** des entpackten Ordners hineinziehen, also diese vier Sachen:
+   `public`, `netlify`, `netlify.toml`, `package.json` (und diese Anleitung, falls du willst)
+   **Wichtig:** nicht den äusseren Ordner `game-of-two` selbst, sondern was darin ist.
+7. Unten auf **Commit changes** klicken
+8. Kontrolle: Auf der Repo-Seite siehst du jetzt direkt die Ordner `public` und `netlify`.
+
+## Schritt 2: Mit Netlify verbinden
+
+1. Auf <https://app.netlify.com> einloggen (am einfachsten mit "Sign up with GitHub")
+2. **Add new project** (oder "Add new site") und dann **Import an existing project**
+3. **GitHub** wählen und Netlify den Zugriff erlauben
+4. Das Repository `game-of-two` auswählen
+5. Bei den Einstellungen nichts ändern (die stehen schon in `netlify.toml`)
+6. **Deploy** klicken und ca. 1 Minute warten
+7. Fertig, oben steht dein Link, z.B. `irgendwas-123.netlify.app`
+
+Tipp: Unter **Project configuration** und dann **Change project name** kannst du den Link umbenennen, z.B. in `game-of-two-kaspar.netlify.app`.
+
+## Schritt 3: Testen mit beiden Handys
+
+1. Beide öffnen den Link
+2. Unten links muss **"Live · synchron"** mit grünem Punkt stehen
+   (Steht dort "Demo-Modus", läuft der Speicher nicht. Dann melde dich bei Claude.)
+3. Du klickst z.B. +10 Push-ups, nach ca. 3 Sekunden sieht es dein Kollege
+4. Zum Home-Bildschirm hinzufügen:
+   - iPhone: in Safari auf **Teilen** und dann **Zum Home-Bildschirm**
+   - Android: in Chrome auf **⋮** und dann **Zum Startbildschirm hinzufügen**
+5. Nach dem Testen ganz unten auf **Alles zurücksetzen** und 22 eintippen
+
+## Später etwas ändern
+
+Neue Datei auf GitHub hochladen (gleicher Name, im gleichen Ordner), dann **Commit changes**.
+Netlify aktualisiert die Seite automatisch nach ca. 1 Minute. Der Spielstand bleibt erhalten.

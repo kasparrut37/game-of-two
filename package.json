@@ -1,0 +1,10 @@
+{
+  "name": "game-of-two",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Gemeinsamer Challenge-Tracker fuer den Game-of-Two-Tag",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.6"
+  }
+}
